@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 
-# Имя файла : test.py
-for i in range(1, 5): 
-	print(i)
-else:
-	print('Цикл for закончен')
+def total(initial=5, *numbers, extra_number): 
+	count = initial
+	for number in numbers: 
+		count += number
+	count += extra_number 
+	print(count)
+	
+total(10, 3, 2, extra_number=50)
